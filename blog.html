@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Básico do html</title>
+</head>
+<body>
+<header>
+    <h1 id="inicio">Mini guia HTML</h1>
+    <hr />
+    <p>Este mini blog tem como objetivo dar um breve resumo sobre os aprendizados em meio aos caminhos do HTML (como um guia). Então, se você veio com o objetivo de aprender algo, está no caminho certo.</p>
+    <h2>Indíce</h2>
+                <ul>
+                    <li><a href="#explicação1">O que é HTML?</a></li>
+                    <li><a href="#explicação2">Estruturação e formatação no HTML</a></li>
+                    <li><a href="#explicação3">Mídia no HTML</a></li>
+                    <li><a href="#explicação4">Tabelas</a></li>
+                    <li><a href="#explicação5">Semântica</a></li>
+                </ul>
+</header>
+
+<main>    
+    <h2 id="explicação1">O que é HTML?</h2>
+     <p>HTML é a sigla para HyperText Markup Language, que em português significa Linguagem de Marcação de Hipertexto. Ele é a base de qualquer site.</p>
+     <p>A principal função do HTML é organizar e estruturar o conteúdo de uma página web. Com ele, conseguimos dizer ao navegador onde estão os títulos, parágrafos, imagens, links, listas, tabelas e outros elementos.</p>
+     <p>Essas marcações, chamadas de <b><u>tags</u></b>, são interpretadas pelo navegador (como o Google Chrome), e exibidas como conteúdo visual.</p>
+     <p>Com isso, podemos dizer que:</p>
+                <ul>
+                    <li>Ele não cria estilos visuais (apenas o CSS pode fazer isso);</li>
+                    <li>O html não da iteratividade (apenas o JavaScript faz isso).</li>
+                </ul>
+    <small><a href="#inicio">(voltar)</a></small>
+    
+    <h2 id="explicação2">Estruturação e formatação no HTML</h2>
+    <p>Depois de entender o que é HTML, o próximo passo é saber como estruturar uma página e formatar o conteúdo com as tags corretas.</p>
+    <h3>📍Estrutura básica no html</h3>
+    <p>Todo documento HTML começa com uma estrutura padrão, que ajuda o navegador a entender o que está sendo exibido. Veja o modelo:</p>
+            <pre><code>
+        &lt;!DOCTYPE html&gt;
+            &lt;html lang="pt-br"&gt;
+            &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Minha Página&lt;/title&gt;
+     &lt;/head&gt;
+    &lt;body&gt;
+    &lt;!-- Conteúdo visível aqui --&gt;
+     &lt;/body&gt;
+    &lt;/html&gt;
+            </code></pre>
+        <p><strong>Explicando:</strong></p>
+                <ul>
+                    <li><code>!DOCTYPE html</code>: Informa que o documento está usando HTML5.</li>
+                    <li><code>html</code>: É a tag que envolve toda a página.</li>
+                    <li><code>head</code>: Contém informações da página que não aparecem para o usuário (como título e codificação de caracteres).</li>
+                    <li><code>title</code>: Define o nome que aparece na aba do navegador.</li>
+                    <li><code>body</code>: Onde fica todo o conteúdo visível da página (textos, imagens, links, etc).</li>
+                </ul>
+    <h3>💻 Estruturação do conteúdo</h3>
+    <p>Para deixar o conteúdo bem organizado, usamos tags semânticas. Elas indicam o papel de cada parte da página:</p>
+                <ul>
+                    <li><code>header</code>: Cabeçalho da página (geralmente com o título ou menu).</li>
+                    <li><code>nav</code>: Área de navegação (links para outras páginas ou seções).</li>
+                    <li><code>main</code>:  Conteúdo principal da página.</li>
+                    <li><code>section</code>: Seções com conteúdos relacionados.</li>
+                    <li><code>article</code>: Um artigo ou post independente.</li>
+                    <li><code>aside</code>: Informações extras ou barras laterais.</li>
+                    <li><code>footer</code>: Rodapé da página.</li>
+                </ul>
+    <p>Essas tags <strong>ajudam na organização</strong> e também <strong>melhoram a acessibilidade e o SEO</strong> (otimização para mecanismos de busca).</p>
+    <h3>📌 Formatação do conteúdo</h3>
+    <p>Para formatar textos e deixar o conteúdo mais claro, usamos outras tags:</p>
+    <h4><strong>Títulos:</h4></strong></h4>
+            <pre><code>
+                &lt;h1&gt;Título principal&lt/h1&gt;
+                &lt;h2&gt;Subtítulo&lt/h2&gt;
+            </code></pre>
+                <lu>
+                     <li>Do <code>h1</code> ao <code>h6</code>, sendo <code>h1</code> mais importante.</li>
+                </lu>
+    <h4><strong>Parágrafo e quebras:</strong></h4>
+            <pre>   
+                &lt;p&gt;Esse é um parágrafo!&lt/p&gt;
+                &lt;br&gt;quebra de linha
+            </pre> 
+                <lu>
+                    <li><code>p</code> cria uma parágrafo.</li>
+                    <li><code>br</code> pula uma linha,deixando mais organizado e limpo.</li>
+                </lu>
+    <h4><strong>Negrito e itálico:</strong></h4>
+            <pre><code>
+                &lt;strong&gt;Texto em negrito&lt/strong&gt;
+                &lt;b&gt;Texto em negrito&lt/b&gt;
+                &lt;i&gt;Itálico&lt/i&gt;
+            </code></pre>
+                <ul>
+                    <li><code>strong</code>: Deixa o texto selecionado em negrito e além disso, tem mais peso semântico comparado ao <code>b</code>.</li>
+                    <li><code>b</code>: Também deixa o texto selecionadoem negrito.</li>
+                    <li><code>i</code>: Deixa o texto selecionado em itálico.</li>
+                </ul>
+    <h4><strong>Listas:</strong></h4>
+                
+            <p><b>Ordenadas</b></p>
+            <pre><code>
+                    &lt;ul&gt;
+                        &lt;li&gt;Item 1&lt/li&gt;
+                        &lt;li&gt;Item 2&lt/li&gt;
+                    &lt;ul/&gt;
+            </code></pre>
+                
+            <p><b>Não ordenadas</b></p>
+            <pre><code>
+                &lt;ol&gt;
+                    &lt;li&gt;Primeiro&lt/li&gt;
+                    &lt;li&gt;Segundo&lt/li&gt;
+                &lt;/ol&gt;
+            </code></pre>
+                <ul>
+                    <li><code>ul</code>: Serve para listas não ordenadas, ou seja, não são numeradas, mas sim ordenadas por pontos.</li>
+                    <li><code>ol</code>: Seve para listas ordenadas, ou seja, são númeradas de 1 até o número limite que deseja.</li>
+                </ul>
+    <h4><strong>Links e imagens:</strong></h4>
+                <pre><code>
+                    &lt;a href="URL do link"&gt;Clique aqui&lt;/a&gt;
+                    &lt;img src="caminho da imagem"&gt;
+                </code></pre>
+                    <ul>
+                        <li><code>a</code>: Ancoragem de link.</li>
+                            <li><code>href</code>: atributo para adicionar o caminho do link.</li>
+                        <li><code>img</code>: Tag para adicionar imagem em seu site.</li>
+                            <li><code>src</code>: É usado  para especificar vários recursos de mídia para elementos de mídia.</li>
+                    </ul>
+    <small><a href="#inicio">(Voltar)</a></small>
+
+    <h2 id="explicação3">Mídia no HTML</h2>
+    <p>O HTML permite inserir diferentes tipos de mídia em uma página, como imagens, áudios e vídeos. Esses elementos ajudam a deixar o site mais completo e interativo.</p>
+    <h3>📷 Imagens</h3>
+     <p>Para exibir uma imagem em sua página, usamos a tag <code>&ltimg&gt</code>.</p>
+     <p><b>sintaxe:</b></p>
+                <pre><code>
+                    &lt;img src="caminho da imagem" alt="descrição da imagem"&gt;
+                </code></pre>
+                <p>Ela contém dois atributos:</p>
+                <ul>
+                    <li><code>src</code>: Define o caminho da imagem;</li>
+                    <li><code>alt</code>: Adiciona descrição a imagem para acessibilidade.</li>
+                </ul>
+    <h3>🔊 Áudio</h3>
+     <p>Para inserir áudio, usamos a tag <code>&lt;audio&gt</code>. Ela precisa do atributo controls para exibir os botões de play, pause e volume.</p>
+     <p><b>sintaxe:</b></p>
+                <pre><code>
+                    &lt;audio controls&gt;
+                        &lt;source src="caminho do áudio" /&gt;
+                    &lt;/audio&gt;
+                </code></pre>
+            <ul>
+                <li><code>source</code>: Usado para especificar vários recursos de mídia para elementos de mídia;</li>
+                    <p>- permite que você especifique vídeo/áudio/imagem alternativos arquivos que o navegador pode escolher, com base no suporte do navegador ou na janela de visualização Largura.</p>
+                <li><code>controls</code>: Especifica que os controles de áudio devem ser exibidos (como um botão de reprodução/pausa, etc.)</li>
+            </ul>
+        <p>Podemos também por outro atributo como o <code>autoplay</code> ou <code>controls + autoplay.</code></p>
+            <p><b>Com autoplay</b></p>
+            <pre><code>
+                &lt;audio autoplay&gt;
+                        &lt;source src="caminho do áudio" /&gt;
+                    &lt;/audio&gt;
+            </code></pre>
+            <ul>
+                <li><code>autoplay</code>: Especifica que o áudio começará a ser reproduzido assim que você entrar no site.</li>
+            </ul>
+            <p><b>Autoplay + controls</b></p>
+                <pre><code>
+                &lt;audio autoplay controls&gt;
+                        &lt;source src="caminho do áudio" /&gt;
+                    &lt;/audio&gt;
+            </code></pre>
+            <ul>
+                <li><code>autoplay + controls</code>: O áudio começará a tocar quando entrar no site, mas você terá os botões para manusear caso queira </li>
+            </ul>
+    <h3>🎥 Vídeo</h3>
+     <p>Para colocar vídeos, usamos a tag <code>&lt;video&gt</code>, que funciona de forma parecida com o <code>&lt;audio&gt</code>.</p>
+    <p><b>sintaxe:</b></p>
+                <pre><code>
+                &lt;video&gt;
+                    &lt;source src="caminho do video" /&gt;
+                &lt;/video&gt;
+            </code></pre>
+        <h4>Tag track</h4>
+            <ul>
+                <li>Ela é uma tag suporte para a tag vídeo.</li>
+                <li>Exibe a legenda do vídeo.</li>
+                <li>As faixas são formatadas no formato WebVTT (arquivos .vtt).</li>
+            </ul>   
+                <pre><code>
+                &lt;video&gt;
+                    &lt;source src="caminho do video" /&gt;
+                    &lt;track src="caminho do video" /&gt;
+                &lt;/video&gt;
+            </code></pre>
+    <p><strong>Atributos:</strong></p>
+            <ul>
+                <li><b>kind</b>: Especifica o tipo de faixa de texto (adequado para pessoas surdas).
+                <li><b>captions</b>: tradução tradicional do vídeo</li>
+                <li><b>chapter</b>: A trilha define os títulos dos capítulos (adequado para navegar no recurso de mídia).</li>
+                <li><b>descraiptions</b>: A trilha define uma descrição textual do conteúdo do vídeo (adequado para usuários cegos).</li>
+                <li><b>metadata</b>: A trilha define o conteúdo usado pelos scripts. Não visível para o usuário.</li>
+                <li><b>subtitles</b>: A trilha define as legendas, usadas para exibir legendas em um vídeo. (mais descritivo do que o chapter)</li>
+            </ul>
+            <ul>
+                <li><b>srclang</b>: define o idioma da legenda.</li>
+                <li>obrigatório se usar o subtitles;</li>
+                <li>arquivo de legenda tem que ter o idioma que deseja por a legenda.</li>
+            </ul>
+    <p><b>sintxe do uso:</b></p>
+               <pre><code>
+                &lt;video&gt;
+                    &lt;source src="caminho do video" /&gt;
+                    &lt;track src="caminho do video" kind="captions" scanlg="en" /&gt;
+                &lt;/video&gt;
+            </code></pre>
+    <small><a href="#inicio">(Voltar)</a></small>
+
+    <h2 id="explicação4">Tabelas</h2>
+    <p>As tabelas no HTML servem para organizar dados em <strong>linhas e colunas</strong>, como em uma planilha. Elas são úteis para exibir informações de forma clara de forma <strong>tabular.</strong></p>
+            <ul>
+                <li>A tag <code>table</code> é quem cria uma tabela no HTML.</li>
+                <li>Consiste em um ou mais elementosm sendo eles <code>&lt;tr&gt;; &lt;th&gt;; &lt;td&gt</code></li>
+                <li>O elemento <code>&lt;tr&gt</code> define uma <strong>linha</strong> de tabela, enquanto a <code>&lt;th&gt</code> define o <strong>cabeçalho</strong> e <code>&lt;td&gt</code> define uma <strong>célula</strong> da tabela</li>
+            </ul>
+                    <p><b>célula:</b> o espaço entre as linhas e colunas da tabela</p>
+            <p><strong>sintaxe:</strong></p>
+                    <pre><code>
+                        &lt;table&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;nome&lt;/td&gt;
+                                &lt;td&gt;idade&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;laura&lt;/td&gt;
+                                &lt;td&gt;25&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/table&gt;
+                    </code></pre>
+    <h3><strong>Atributos:</strong></h3>
+            <p>Há alguns atributos que podem ser usados dentro da tag <code>&lt;table&gt</code> no HTML:</p>
+                    <ul>
+                        <li><code>border</code>: Adiciona a borda na tabela;</li>
+                        <li><code>width</code>: Adiciona a largura da tabela (célula);</li>
+                        <li><code>align</code>: Formata a posição da tabela na página;</li>
+                        <li><code>cellspacing</code>: Faz o espaçamento entre as células;</li>
+                        <li><code>cellpadding</code>: Faz o espaçamento da borda da tabela;</li>
+                        <li><code>sumary</code>: Adiciona uma definição do que se refere essa tabela.</li>
+                    </ul>
+                        <p>Quando o leitor de tela passar por ela (tabela) ele vai ler o que está no <code>sumary</code>.</p>
+    <h3>Tag th:</h3>
+            <ul>
+                <li>A tag <code>&lt;th&gt</code> serve para a máquina/navegador reconhecer que aquilo é um cabeçalho;</li>
+                <li>Isso é super importante para a questão da acessibiladade, já que: <u>quando o leitor de tela passar por ali, falará como um cabeçalho e não ccomo apenas uma parte da tabela</u>.</li>
+            </ul>     
+        <p><strong>sintaxe:</strong></p>
+                    <pre><code>
+                        &lt;table&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;nome&lt;/th&gt;
+                                &lt;th&gt;idade&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;laura&lt;/td&gt;
+                                &lt;td&gt;25&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/table&gt;
+                    </code></pre>
+            <ul>
+                <li>Como regra as tabelas precisam ter nomes curtos. E para ser mais descritivo na hora que o usuário acessar a página, colocamos o <code>title</code>  para quando for passado o cursor sobre o cabeçalho, ele mostre mais especificadamente o que contém naquela tabela.</li>
+            </ul>
+                    <pre><code>
+                        &lt;table&gt;
+                            &lt;tr&gt;
+                                &lt;th title="nome completo"&gt;nome&lt;/th&gt;
+                                &lt;th title="idade&gt;idade&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;laura&lt;/td&gt;
+                                &lt;td&gt;25&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/table&gt;
+                    </code></pre>
+        <p>Para melhorar a questão do leitor de tela, podemos por o summary. Ele lerá a definição daquela tabela</p>
+                    <pre><code>
+                        &lt;table sumarry="tabela de nomes e idade"&gt;
+                            &lt;tr&gt;
+                                &lt;th title="nome completo"&gt;nome&lt;/th&gt;
+                                &lt;th title="idade&gt;idade&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;laura&lt;/td&gt;
+                                &lt;td&gt;25&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/table&gt;
+                    </code></pre>
+        <h3><strong>OBS!!!</strong></h3>
+                <P>Quando o leitor de página passar pela página, lerá com sotaque gringo pois na configuração do doctype, estará com o indioma <code>‘en’</code>. Deve-se colocar em <code>‘pt-br'</code>.</P>
+        <h3>Tags tbody, thead e tfoot</h3>
+                    <h4>tbody:</h4>
+                    <ul>
+                        <li>Usada para agrupar o corpo de uma tabela.</li>
+                        <li>É usada em conjunto com os elementos <code>&lt;thead&gt</code> e <code>&lt;tfoot&gt</code> para especificar cada parte da tabela.</li>
+                        <li>Os navegadores podem usar esses elementos para habilitar a rolagem do corpo da tabela independentemente do cabeçalho e do rodapé. Além disso, ao imprimir uma tabela grande que se estende por várias páginas, esses elementos podem permitir que o cabeçalho e o rodapé da tabela sejam impressos na parte superior e inferior de cada página.</li>
+                    </ul>
+                        <p><b>OBS:</b>O elemento deve ter uma ou mais tags <code>&lt;tr&gt</code> dentro do <code>&lt;tbody&gt</code>.</p>
+                        <p><strong>sintaxe:</strong></p>
+                            <pre><code>
+                                &lt;table sumarry="tabela de nomes e idade"&gt;
+                                &lt;tbody&gt;
+                            &lt;tr&gt;
+                                &lt;th title="nome completo"&gt;nome&lt;/th&gt;
+                                &lt;th title="idade&gt;idade&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;laura&lt;/td&gt;
+                                &lt;td&gt;25&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                        &lt;/table&gt;
+                            </code></pre>
+                    <h4>thead:</h4>
+                    <ul>
+                        <li>Agrupa o cabeçalho de uma tabela. </li>
+                        <li>usado em conjunto com os elementos <code>&lt;tbody&gt</code> e <code>&lt;tfoot&gt</code> para especificar cada parte de uma tabela (cabeçalho, corpo, rodapé).</li>
+                        <li>Os navegadores podem usar esses elementos para habilitar a rolagem do corpo da tabela independentemente do cabeçalho e do rodapé. Além disso, ao imprimir uma tabela grande que se estende por várias páginas, esses elementos podem permitir que o cabeçalho e o rodapé da tabela sejam impressos na parte superior e inferior de cada página.</li>
+                    </ul>
+                        <p><strong>sintaxe:</strong></p>
+                            <pre><code>
+                                &lt;table sumarry="tabela de nomes e idade"&gt;
+                                &lt;tbody&gt;
+                                &lt;thead&gt;
+                            &lt;tr&gt;
+                                &lt;th title="nome completo"&gt;nome&lt;/th&gt;
+                                &lt;th title="idade&gt;idade&lt;/th&gt;
+                            &lt;/tr&gt;
+                                &lt;/thead&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;laura&lt;/td&gt;
+                                &lt;td&gt;25&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                        &lt;/table&gt;
+                            </code></pre>
+                    <h4>tfoot:</h4>
+                    <ul>
+                        <li>Usado para agrupar o rodapé usado na tabela.</li>
+                    </ul>
+                      <p><strong>sintaxe:</strong></p>
+                          <pre><code>
+                                &lt;table sumarry="tabela de nomes e idade"&gt;
+                            &lt;tr&gt;
+                                &lt;th title="nome completo"&gt;nome&lt;/th&gt;
+                                &lt;th title="idade&gt;idade&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;laura&lt;/td&gt;
+                                &lt;td&gt;25&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tfoot&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;total&lt;/total&gt;
+                                &lt;td&gt;1&lt;/total&gt;
+                            &lt;/tr&gt;
+                            &lt;/tfoot&gt;
+                        &lt;/table&gt;
+                          </code></pre>
+                <p><b>Nota:</b>a ordem deles não altera nada no navegador. Então, pode por o <code>thead</code> em cima, <code>tfoot</code> no meio e <code>tbody</code> em baixo.</p>
+        <small><a href="#inicio">(Voltar)</a></small>
+    <h2 id="explicação5">Semântica</h2>  
+    <p>O html passou por uma nova atualização, saindo do <b>html4</b> para o <b>html5</b>. Com isso, mudanças foram feitas na maior parte da sua estruturação. </p>
+    <p>O que antes era feito em sua maioria no html, como estilização, formatação — dentre outros —, agora foi dividido entre ele, o CSS e o javascript. Sendo assim, agora, ele será mais bruto, ou de forma mais clara para se dizer: será focado na estruturação do site. Agora, o CSS fica com a estilização e formatação, o HTML com a estruturação e o JavaScript com a manipulação das ações dentro do site/plataforma.</p>  
+        <blockquote><i>No site referente da W3 é explicado melhor como foi feita a mudança e quais foram as mudanças.</i></blockquote>
+    <p><i>Quais foram as principais mudanças?</i></p>
+        <ul>
+            <li>O desuso de antigas tags e manipulações;</li>
+            <li>Criação de tags mais dinâmicas;</li>
+            <li>A troca das div's para novos cabeçalhos de reconhecimento (header, main e footer);</li>
+            <li>Nova forma de iniciação da estrutura html.</li>
+        </ul>
+    <h3>A troca das div's</h3>
+    <p>A div em si não foi trocada, mas agora tem um jeito mais claro e com maior peso semântico para organizarmos a nossa estrutura html.</p>
+        <ul>
+            <li>As divs são usadas quando não se tem tag semântica adequada, para aplicar estilo/script em elementos agrupados (container genérico para grid/flexbox/layout).</li>
+        </ul>
+    <p>Ela continua sendo válida e útil, mas agora temos outra estruturação: <code>header, main e footer</code>.</p>
+        <ul>
+            <li><b>header</b>: cabeçalho / <b>main</b>: corpo do site / <b>footer</b>: rodapé do site</li>
+            <li>Ela explica a função de cada parte;</li>
+            <li>mais clara para SEO, leitores de tela e manutenção;</li>
+            <li>Ideal para substituir blocos inteiros genéricos.</li>
+        </ul>
+    <h3>Tag's adicionadas e excluídas</h3>
+        <p><strong>Adicionadas:</strong></p>
+        <ul>
+            <li><code> &lt;main&gt ; &lt;header&gt ; &lt;footer&gt ; &lt;nav&gt ; &lt;section&gt ; &lt;aside&gt ; &lt;article&gt ; &lt;vídeo&gt</code></li>
+        </ul>
+        <p><strong>Excluídas:</strong></p>
+        <ul>
+            <li><code>&lt;basefont&gt ; &lt;big&gt ; &lt;center&gt ; &lt;font&gt ; &lt;strike&gt ; &lt;tt&gt ; &lt;frame&gt ; &lt;frameset&gt</code></li>
+        </ul>
+    <h3>Acessibiladade</h3>
+        <p>A acessibilidade envolve um conjunto de projetos inclusivos e adaptáveis para deficientes, seja ele visual, auditivo ou físico.<p>
+        <p>Hoje em dia é um grande diferencial o projeto ter essa inclusão, assim todos podem consumir o seu produto — o que infelizmente ainda não foi normalizado.</p>
+        <p>Segundo a W3C (grupo oficial que cria e mantém padrões oficiais do html) diz o seguinte:</p>
+        <blockquote cite="https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1"><i>A acessibilidade é essencial para desenvolvedores e organizações que desejam criar sites e ferramentas da web de alta qualidade e não excluir as pessoas de usar seus produtos e serviços.</i></blockquote>
+        <p>A missão da inciativa de acessibilidade web (WAI) é levar a web a todo seu potencial para ser acessível, permitindo que pessoas com deficiência participem igualmente da rede.</p>
+    <h3>ARIA</h3>
+    <h4>Accessibility tree</h4>   
+    <p>Assim que você gera um html, o seu navegador lê ele (DOM). Mas por debaixo dos panos, monta-se uma árvore de acessibilidade, que não é nada mais nada menos que é por onde o leitor de tela lerá, e os usuários com níveis de deficiência lerão por ele.</p>     
+            <ul>
+                <li><b>DOM:</b> é o html lido</li>
+            </ul>
+    <p>Ele não muda o código, apenas adapta para o leitor de tela.</p>
+    <h4>ARIA - WAI</h4>
+    <p>São atributos que você coloca no seu html para enriquece-lo e deixa-lo adaptativo a acessibilidades. Ele muda apenas a árvore de acessibilidade.</p>
+    <h3>Web scraping</h3>
+    <p><i><b>amos do inicío...</b></i></p>
+    <p>O <b><i>crawler</i></b> (rastreador, robô ou indexador) é um termo genérico para qualquer programa usado para descobrir e examinar sites automaticamente seguindo links entre páginas web. Ou seja, ele lê o site, pega as informações úteis e indexam, colocando de uma forma mastigada em outra fonte de dado.</p>
+    <p>A Google lançou o <b><i>Googlebot</i></b>, onde ele faz a indexação das páginas web dentro da plataforma de pesquisa deles. Ele faz o mesmo processo: entra no site, extrai as informações e grava no banco de dados dele, ficando disponível para buscar depois.</p>
+    <p>Isso forma uma espécie de teia, pois, ele vai lincando sites em sites que estão correlacionados.</p>
+
+    <p>Para ajudar nisso, ela também tem o <b><i>google search</i></b> console, onde você da a autorização para que isso seja realizado por eles.</p>
+            <ul>
+                <li>Por isso é importante mantermos um ótima semântica no código. Assim, ele poderá fazer uma indexação mais clara — além de outro vários beneficios.</li>
+            </ul>
+    <p><i><b>Então o que é web scraping?</b></i></p>
+    <p>é uma técnica automatizada para extrair dados de sites. Consiste em acessar páginas da web, interpretar seu conteúdo (HTML, CSS, JavaScript) e coletar informações específicas de forma estruturada (como textos, imagens, links, tabelas etc.) para análise, armazenamento ou reutilização.</p>
+    <p><i><b>Legalidade e ética:</b></i></p>
+            <ul>
+                <li><b>Respeite os termos de serviço</b> do site. Alguns proíbem scraping;</li>
+                <li><b>Verifique o arquivo</b> <code>robots.txt</code> (ex.: <code>site.com/robots.txt)</code> para ver as regras de acesso;</li>
+                <li><b>Evite sobrecarregar servidores</b> com muitas requisições em curto período;</li>
+                <li><b>Dados pessoais:</b> Leis como GDPR (UE) ou LGPD (Brasil) podem restringir a coleta.</li>
+            </ul>
+   <h3>Tag's HTML5</h3>
+   <h4>header, main e footer</h4> 
+        <p><strong><code>&lt;header&gt</code></strong></p>
+            <ul>
+                <li>É a "cabeça"</li>
+                <li>Representa um conjunto para conteúdo introdutório do site ou conjunto de links de navegação;</li>
+            </ul>
+        <p>Geralmente contém:</p>
+            <ul>
+                <li>Um ou mais títulos (h1-h6);</li>
+                <li>Logotipo ou ícone;</li>
+                <li>Informações autorais.</li>
+            </ul>
+    <p><strong><code>&lt;main&gt</code></strong></p>
+            <ul>
+                <li>É o “corpo” do documento;</li>
+                <li>É uma tag exclusiva — não pode ser filha de header ou footer;</li>
+                <li>Tag principal da página;</li>
+                <li>Ela é a única que não pode ficar dentro das outras tags;</li>
+                <li>Ela só pode ser filiada a div, body, etc;</li>
+                <li>Todo o conteúdo que contém nela tem que ser único.</li>
+            </ul>
+    <p><strong><code>&lt;footer&gt</code></strong></p>
+            <ul>
+                <li>Rodapé da página.</li>
+            </ul>
+        <p>Geralmente contém:</p>
+           <ul>
+            <li>Informações de autoria;</li>
+            <li>direitos autorais informação;</li>
+            <li>Informações de contato;</li>
+            <li>Mapa do site;</li>
+            <li>Voltar ao topo Links;</li>
+            <li>Documentos relacionados.</li>
+           </ul>
+    <h4>aside, section e nav</h4>
+        <p><strong><code>&lt;aside&gt</code></strong></p>
+           <p>Usado para colocar conteúdo extras como:</p>
+                <ul>
+                    <li><b>Caixa de destaque lateral</b>;</li>
+                    <li><b>Biografia do autor</b>;</li>
+                    <li><b>Anúncios</b>;</li>
+                    <li><b>Links relacionados</b>;</li>
+                    <li><b>Notas adicionais</b>;</li>
+                    <li><b>Menus auxiliares</b>;</li>    
+                </ul>
+            <p>Ela pode ser usada fora ou dentro do artigo, dependendo de quem ele "acompanha". Além disso, representa conteúdos relacionados, fora do fluxo principal.</p>
+        <p><strong><code>&lt;section&gt</code></strong></p>
+                <ul>
+                    <li>Usada para dividir um conteúdo em partes tematicamente relacionadas.</li>
+                    <li>Deve ter título próprio e representar uma parte independente do conteúdo geral da página.</li>
+                </ul>
+        <p><b>EM RESUMO:</b> Use <code>&lt;section&gt</code> quando você tiver um bloco de conteúdo com um tema específico, com título, e que faz parte da estrutura principal da página.</p>
+                <ul>
+                    <li>Por exemplo, um menu de navegação deve estar dentro um elemento <code>&lt;nav&gt</code>, mas uma lista de resultados de pesquisa ou a exibição de um mapa e seus controles não possuem elementos específicos, e podem ser colocados dentro de uma <code>&lt;section&gt</code>.</li>
+                    <li>Cada elemento da section deve conter um cabeçalho h1-h6.</li>
+                </ul>
+        <p><strong><code>&lt;nav&gt</code></strong></p>
+                <ul>
+                    <li>Serve para agrupar links de navegação — menus ou conjuntos de links que ajudam o usuário a navegar pela página.</li>
+                </ul>
+            <P>Use quando:</P>
+                <ul>
+                    <li>Estiver criando <b>menus principais</b>;</li>
+                    <li>Estiver adicionados <b>linkd de navegação lateral</b>;</li>
+                    <li>Quiser um <b>grupo de links que levem o usuário para outras partes do site.</b></li>
+                </ul>
+            <p>Não use <code>&lt;nav&gt</code> para qualquer grupo de links. Só use quando os links realmente forem para navegação (não em rodapés com termos de uso, por exemplo — aí pode usar <code>&lt;footer&gt</code> com <code>&lt;ul&gt</code> mesmo).</p>
+    <h4>article, blockquote e q</h4>
+        <p><strong><code>&lt;article&gt</code></strong></p>
+                <ul>
+                    <li>Destinado a colocar artigo relacionado a página em si.</li>
+                    <li>Ele pode ser aninhado um dentro do outro, se relacionando entre si</li>
+                </ul>
+                        <pre><code>
+                            &lt;article&gt;
+                                &lt;article&gt;&lt;/article&gt;
+                            &lt;/aticle&gt;
+                        </code></pre>
+        <p><strong>exemplo:</strong></p>
+                        <pre><code>
+                            &lt;article&gt;
+                                &lt;h1&gt;A acessibilidade dentro da programação&lt;/h1&gt;
+                                 &lt;article&gt;
+                                    &lt;p&gt;Ela é muito importante, pois a tecnologia vem alastrando cada vez mais a sociedade e a inclusão precisar estar adentrada a isso&lt;/p&gt;
+                                 &lt;/article&gt;
+                            &lt;/aticle&gt;
+                        </code></pre>
+                <ul>
+                    <li>Um atributo interessante a ser usado em artigos caso queira por data de publicação, seria o <code>&lt;time&gt</code></li>
+                </ul>
+                        <pre><code>
+                            &lt;article&gt;
+                                &lt;time pubtime&gt;28/07/2025&lt;/time&gt;
+                            &lt;/article&gt;
+                        </code></pre>
+        <p><strong><code>&lt;blockquote&gt</code></strong></p>
+                <ul>
+                    <li>Usado para citação</li>
+                    <li>Caso você queira por um link de referencia dentro da citação, sobre outro site, você pode usar o atributo <code>&lt;cite&gt</code></li>
+                </ul>
+                      <pre><coce>
+                        &lt;blockquote cite="link de referencia"&gt;&lt;/blockquote&gt;
+                      </coce></pre>  
+        <p><strong><code>&lt;q&gt</code></strong></p>
+                <ul>
+                    <li>Também serve para citação, mas é apenas para textos pequenos.</li>
+                    <li>Ele não quebra linha  e coloca entre aspas o textos.</li>
+                </ul>
+    <h4>figure, figcaption e picture</h4>
+        <p>Essas tags servem mais para questão de acessibiladade, pois, em sua maioria usa-se tag's que já tem na estrutura html.</p>
+        <p><strong><code>&lt;figure&gt</code></strong></p>
+                <ul>
+                    <li>É um container — assim como uma div — para por imagens dentro dela, delimitando o escopo de uma imagem.</li>
+                    <li>Ela anda em conjunto com a legenda da imagem, então uma acompanha a outra. </li>
+                </ul>
+                    <pre><code>
+                        &lt;figure&gt;
+                            &lt;img src="img" /&gt;
+                        &lt;figure&gt;
+                    </code></pre>
+        <p><strong><code>&lt;figcaption&gt</code></strong></p>
+                <ul>
+                    <li>É uma tag auxiliar da <code>&lt;figure&gt</code></li>
+                    <li>Define a legenda da imagem</li>
+                </ul>
+                    <pre><code>
+                        &lt;figure&gt;
+                            &lt;img src="img"&gt;
+                                &lt;figcaption&gt;descrição da imagem&lt;/figcaption&gt;
+                        &lt;/figcaption&gt;
+                    </code></pre>
+        <p><strong><code>&lt;picture&gt</code></strong></p>
+                <ul>
+                    <li>Também é um contêiner de imagem;</li>
+                    <li>oferece aos desenvolvedores da Web mais flexibilidade na especificação recursos de imagem.</li>
+                    <li>O uso mais comum do elemento será para direção de arte em designs responsivos. Em vez de ter uma imagem ampliada ou reduzida com base na largura da janela de visualização, várias imagens podem ser projetadas para preencher mais bem o janela de visualização do navegador.</li>
+                </ul>
+                    <pre><cpde>
+                        &lt;picutre&gt;
+                            &lt;source src="img" media="(min-width: 600px)"&gt;
+                            &lt;img src="img"&gt;
+                        &lt;/picture&gt;
+                    </cpde></pre>
+        <p><i>Isso fará com que imagem mude de tamanho quando a página for manipulada pelo cursor.</i></p>
+        <h3>SEO</h3>
+                <ul>
+                    <li>Otimização para motores de busca.</li>
+                    <li>conjunto de estratégias usadas para melhorar o posicionamento de um site (ou conteúdo) nos resultados orgânicos do Google, Bing e outros mecanismos de busca.</li>
+                </ul>
+        <h4>Fatores principais</h4>
+            <p>SEO é dividido em 3 áreas principais:</p>
+            <p><strong>1. SEO on-page (dentro do seu site)</strong></p>
+                <ul>
+                    <li>Palavras-chave bem escolhidas;</li>
+                    <li>Títulos e subtítulos otimizados (h1, h2);</li>
+                    <li>URLs amigáveis (ex: <code>site.com/cuidados-pele-oleosa</code>);</li>
+                    <li>Boa estrutura do conteúdo;</li>
+                    <li>Imagens com descrição (atributo alt).</li>
+                </ul>
+            <p><strong>2. SEO off-page (fora do seu site)</strong></p>
+                <ul>
+                    <li>Links de outros sites apontando para o seu (backlinks);</li>
+                    <li>Presença nas redes sociais;</li>
+                    <li>Autoridade do seu domínio.</li>
+                </ul>
+            <p><strong>SEO técnico</strong></p>
+                <ul>
+                    <li>Velocidade de carregamento do site;</li>
+                    <li>Design responsivo (funciona bem no celular);</li>
+                    <li>Segurança (HTTPS);</li>
+                    <li>Boa indexação do site pelos robôs do Google.</li>
+                </ul>
+        <h4>Por que ele é importante?</h4>
+                <ul>
+                    <li><b>Mais visitas orgânicas</b> (sem pagar anúncios);</li>
+                    <li><b>Melhor experiência para o usuário</b>;</li>
+                    <li><b>Maior credibilidade</b> para seu site;</li>
+                    <li><b>Vantagem competitiva</b> em relação a quem não faz SEO.</li>
+                </ul>
+        <small><a href="#inicio">(Voltar)</a></small>
+            <hr/>
+</main>
+
+<footer>
+    <p><b>Bom, chegamos ao fim do pequeno guia sobre aprendizagem com html. Espero que tenha compreendido todos os tópicos e boa sorte em seu caminho, dev.🙂</b></p>
+    <p><strong>Link de referencias:</strong></p>
+                <ul>
+                    <li><a href="https://www.w3schools.com/tags/default.asp" target="_blank">HTML Reference.com</a></li>
+                    <li><a href="https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1" target="_blank">WCAG</a></li>
+                    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN web docs</a></li>
+                </ul>
+</footer>
+                    
+    </body>
+</html>
